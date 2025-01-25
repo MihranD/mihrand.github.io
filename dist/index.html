@@ -17,17 +17,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <script>
-            document.addEventListener('click', function (event) {
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                const dropdown = event.target.closest('.dropdown-menu');
-    
-                if (dropdown) {
-                    event.stopPropagation(); // Prevent the menu from closing
-                }
-            });
-        </script>
-
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -65,7 +54,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Software  Developer specializing in AI and iOS</p>
+                <p class="masthead-subheading font-weight-light mb-0">Software Developer specializing in AI and iOS</p>
             </div>
         </header>
         <!-- AI Section-->
@@ -1197,5 +1186,28 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- * * In mobile devices clicking on Portfolio is not opening sub menus. Here we did a workaround to move AI section when user click POrtfolio * *-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Detect screen size
+                const screenWidth = window.innerWidth;
+                if (screenWidth <= 768) {
+                    // alert('This is a mobile screen!');
+                    const portfolioLink = document.querySelector('#portfolioDropdown');
+                    portfolioLink.addEventListener('click', function (event) {
+                        // alert('Portfolio link clicked!');
+                        event.preventDefault(); // Prevent default navigation
+                        const aiSection = document.querySelector('#ai');
+                        if (aiSection) {
+                            aiSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to AI section
+                        } else {
+                            console.log('AI section not found!');
+                        }
+                    });
+                } else {
+                    // alert('This is a desktop screen!');
+                }
+            });
+        </script>
     </body>
 </html>
