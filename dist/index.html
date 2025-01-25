@@ -27,7 +27,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle" href="#portfolio" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                                <li><a class="dropdown-item" href="#ai">AI</a></li>
+                                <li><a class="dropdown-item" href="#ios">iOS</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     </ul>
@@ -50,12 +56,48 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Senior iOS Developer Combining AI</p>
             </div>
-        </header>        
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        </header>
+        <!-- AI Section-->
+        <section class="page-section portfolio" id="ai">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">AI</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Diploma Section -->
+                <h3 class="text-center text-secondary mt-5">Graduation Projects at Paris-Sorbonne University</h3>
+                <div class="row justify-content-center">
+                    <!-- Data Science -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/shore.png" alt="Shore Business" />
+                        </div>
+                    </div>
+                    <!-- MLOps -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/pim.png" alt="SecurePIM" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- iOS Section-->
+        <section class="page-section portfolio" id="ios">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">iOS</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
